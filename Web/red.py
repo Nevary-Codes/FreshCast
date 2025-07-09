@@ -8,11 +8,11 @@ from dotenv import load_dotenv
 from pymongo import MongoClient
 import bcrypt
 
-model = joblib.load("ML/freshcast_xgb_model.joblib")
-label_encoder = joblib.load("ML/product_label_encoder.joblib")
+model = joblib.load("freshcast_xgb_model.joblib")
+label_encoder = joblib.load("product_label_encoder.joblib")
 
 
-df = pd.read_csv("ML/freshcast_dataset.csv")
+df = pd.read_csv("freshcast_dataset.csv")
 df['date'] = pd.to_datetime(df['date'])
 df.sort_values(['product', 'date'], inplace=True)
 
@@ -141,19 +141,3 @@ def addUser(name, email, password, users):
     result = users.insert_one(user)
     user["_id"] = result.inserted_id
     return user
-
-
-from pymongo.mongo_client import MongoClient
-from pymongo.server_api import ServerApi
-
-uri = "mongodb+srv://nevarycolab:1F0J6rXtdrC0zi1X@cluster0.ohuk50d.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0"
-
-# Create a new client and connect to the server
-client = MongoClient(uri, server_api=ServerApi('1'))
-
-# Send a ping to confirm a successful connection
-try:
-    client.admin.command('ping')
-    print("Pinged your deployment. You successfully connected to MongoDB!")
-except Exception as e:
-    print(e)
