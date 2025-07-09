@@ -76,7 +76,7 @@ def login():
 @app.route("/dashboard")
 @login_required
 def dashboard():
-    df = pd.read_csv("ML/freshcast_dataset.csv")
+    df = pd.read_csv("freshcast_dataset.csv")
     past_forecasts = []
     for i in df["product"].unique():
         past_forecasts.append(forecast_past(i))
@@ -87,7 +87,7 @@ def dashboard():
 @app.route("/overview")
 @login_required
 def overview():
-    df = pd.read_csv("ML/freshcast_dataset.csv")
+    df = pd.read_csv("freshcast_dataset.csv")
     max_product = df.groupby("product")["sales"].sum().idxmax()
     max_sales = df.groupby("product")["sales"].sum().max()
     
@@ -101,7 +101,7 @@ def overview():
 @login_required
 def forecasts():
     selected_product = request.args.get("product", default="Milk (1L)")
-    df = pd.read_csv("ML/freshcast_dataset.csv")
+    df = pd.read_csv("freshcast_dataset.csv")
     all_products = df["product"].unique()
 
     past = forecast_past(selected_product)
@@ -113,7 +113,7 @@ def forecasts():
 @app.route("/inventory")
 @login_required
 def inventory():
-    df = pd.read_csv("ML/freshcast_dataset.csv")
+    df = pd.read_csv("freshcast_dataset.csv")
 
     df["date"] = pd.to_datetime(df["date"])
 
