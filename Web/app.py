@@ -7,7 +7,7 @@ from red import forecast, forecast_past, addUser
 from pymongo import MongoClient
 import os
 from dotenv import load_dotenv
-from flask_login import login_manager, login_user, LoginManager
+from flask_login import login_manager, login_user, LoginManager, login_required
 import bcrypt
 from models import User
 
@@ -74,6 +74,7 @@ def login():
 
 
 @app.route("/dashboard")
+@login_required
 def dashboard():
     df = pd.read_csv("ML/freshcast_dataset.csv")
     past_forecasts = []
@@ -84,6 +85,7 @@ def dashboard():
 
 
 @app.route("/overview")
+@login_required
 def overview():
     df = pd.read_csv("ML/freshcast_dataset.csv")
     max_product = df.groupby("product")["sales"].sum().idxmax()
@@ -96,6 +98,7 @@ def overview():
 
 
 @app.route("/forecasts")
+@login_required
 def forecasts():
     selected_product = request.args.get("product", default="Milk (1L)")
     df = pd.read_csv("ML/freshcast_dataset.csv")
@@ -108,6 +111,7 @@ def forecasts():
 
 
 @app.route("/inventory")
+@login_required
 def inventory():
     df = pd.read_csv("ML/freshcast_dataset.csv")
 
@@ -130,9 +134,10 @@ from flask_login import logout_user
 
 
 @app.route("/logout")
+@login_required
 def logout():
     logout_user()
-    return redirect(url_for("login"))
+    return redirect(url_for("home"))
 
 
 if __name__ == '__main__':
