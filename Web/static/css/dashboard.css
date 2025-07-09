@@ -1,0 +1,21 @@
+body {
+  margin: 0;
+  font-family: "Segoe UI", sans-serif;
+  background-color: #f9fefc;
+  color: #1a1a1a;
+  position: relative;
+  min-height: 100vh;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url("../images/login.png") no-repeat center center;
+  background-size: cover;
+  opacity: 0.13;
+  z-index: -1;
+}
