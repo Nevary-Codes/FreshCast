@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Inventory Management</title>
+  <link rel="stylesheet" href="../static/css/inventory.css">
+</head>
+
+<body>
+  <div style="display: flex; min-height: 100vh;">
+
+    
+    <aside style="width: 220px; background-color: #f4fbf7; padding: 30px 20px; border-right: 1px solid #e0e0e0;">
+      <div style="font-weight: bold; font-size: 18px; margin-bottom: 30px;">FreshMart</div>
+      <ul style="list-style: none; padding: 0; margin: 0; font-size: 14px;">
+        <li style="padding: 10px;"><a href="{{ url_for('dashboard') }}">🏠 Dashboard</a></li>
+        <li style="padding: 10px;"><a href="{{ url_for('forecasts') }}">📈 Forecasts</a></li>
+        <li style="padding: 10px; background-color: #d9f2e9; border-radius: 6px;"><a href="{{ url_for('inventory') }}">📦 Inventory</a></li>
+        <li style="padding: 10px;"><a href="{{ url_for('logout') }}">🚪 Log Out</a></li>
+      </ul>
+      <div style="margin-top: 50px; font-size: 13px; color: #555;">
+        <div style="margin-bottom: 10px;"><a href="#">❓ Help and Docs</a></div>
+        <div><a href="#">📬 Feedback</a></div>
+      </div>
+    </aside>
+
+    
+    <main style="padding: 40px; flex: 1;">
+      <h1 style="margin-bottom: 10px;">Inventory Management</h1>
+      <h3 style="margin-bottom: 20px;">Current Inventory</h3>
+
+      <table style="width: 100%; border-collapse: collapse; background-color: white; border-radius: 10px; overflow: hidden; box-shadow: 0 0 5px rgba(0,0,0,0.05); margin-bottom: 50px;">
+        <thead style="background-color: #f0f7f4;">
+          <tr style="text-align: left;">
+            <th style="padding: 12px;">Product</th>
+            <th style="padding: 12px;">Current Stock</th>
+            <th style="padding: 12px;">Forecasted Demand</th>
+            <th style="padding: 12px;">Suggested Order</th>
+            <th style="padding: 12px;">Status</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for forecast in forecasts %}
+            <tr>
+              <td style="padding: 12px;">{{ forecast["product"] }}</td>
+              <td style="padding: 12px;">{{ forecast["total_sales"] }} units</td>
+              <td style="padding: 12px;">{{ forecast["total"] }} units</td>
+              <td style="padding: 12px;">{% if forecast["total_sales"] > forecast["total"] %} 0 {% else %} {{ forecast["total"] - forecast["total_sales"] }} {% endif %}units</td>
+              {% if forecast["total_sales"] > forecast["total"] %}
+                <td style="padding: 12px;"><span style="background-color: #e0f2f1; padding: 6px 14px; border-radius: 20px;">Optimal</span></td>
+              {% else %}
+                <td style="padding: 12px;"><span style="background-color: #fff3cd; padding: 6px 14px; border-radius: 20px;">Understock</span></td>
+              {% endif %}
+            </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+
+      
+      <!-- <h3 style="margin-bottom: 20px;">Alerts</h3>
+      <div style="display: flex; flex-direction: column; gap: 15px;">
+
+        
+        <div style="display: flex; justify-content: space-between; align-items: center; background-color: #e9f8f0; padding: 15px 20px; border-radius: 10px;">
+          <div>
+            <div style="font-weight: bold;">⚠️ Lettuce Understock</div>
+            <div style="color: #4caf50;">Forecasted demand exceeds current stock</div>
+          </div>
+          <button style="background-color: #ffffff; border: 1px solid #4caf50; color: #4caf50; padding: 8px 14px; border-radius: 6px; cursor: pointer; width: 150px;">Order Now</button>
+        </div>
+
+       
+        <div style="display: flex; justify-content: space-between; align-items: center; background-color: #e9f8f0; padding: 15px 20px; border-radius: 10px;">
+          <div>
+            <div style="font-weight: bold;">⚠️ Milk Understock</div>
+            <div style="color: #4caf50;">Forecasted demand exceeds current stock</div>
+          </div>
+          <button style="background-color: #ffffff; border: 1px solid #4caf50; color: #4caf50; padding: 8px 14px; border-radius: 6px; cursor: pointer; width: 150px;">Order Now</button>
+        </div> -->
+
+      </div>
+    </main>
+  </div>
+</body>
+</html>

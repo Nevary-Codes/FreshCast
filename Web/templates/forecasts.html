@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Product Overview</title>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <style>
+    body {
+      margin: 0;
+      font-family: "Segoe UI", sans-serif;
+      background-color: #f9fefc;
+      color: #1a1a1a;
+      position: relative;
+      min-height: 100vh;
+    }
+
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: url("../static/images/login.png") repeat;
+      opacity: 0.13;
+      z-index: -1;
+    }
+  </style>
+</head>
+<body>
+  <nav style="display: flex; justify-content: space-between; align-items: center; padding: 20px 40px; background-color: #fff; border-bottom: 1px solid #eee;">
+    <div style="font-weight: bold; font-size: 18px">🌿 AgriVision</div>
+    <div style="display: flex; gap: 30px; font-size: 14px">
+      <a href="{{ url_for('dashboard') }}" style="text-decoration: none; color: #1a1a1a;">Dashboard</a>
+      <a href="{{ url_for('forecasts') }}" style="text-decoration: none; color: #1a1a1a;">Forecasts</a>
+      <a href="{{ url_for('inventory') }}" style="text-decoration: none; color: #1a1a1a;">Inventory</a>
+      <a href="{{ url_for('logout') }}" style="text-decoration: none; color: #1a1a1a;">Log Out</a>
+    </div>
+  </nav>
+
+  <div style="display: flex">
+    <main style="padding: 40px; flex: 1">
+      <form method="GET" action="{{ url_for('forecasts') }}">
+        <label for="product">Select Product:</label>
+        <select name="product" id="product" onchange="this.form.submit()" style="margin-left: 10px; padding: 5px;">
+          {% for p in all_products %}
+            <option value="{{ p }}" {% if p == selected_product %}selected{% endif %}>{{ p }}</option>
+          {% endfor %}
+        </select>
+      </form>
+
+      <h2 style="margin-top: 30px; margin-bottom: 5px">
+        Product Overview: {{ selected_product }}
+      </h2>
+      <p style="color: #4caf50; margin-bottom: 30px">
+        Track performance, forecast accuracy, and key demand drivers for {{ selected_product }}.
+      </p>
+
+      <div style="display: flex; gap: 20px; margin-bottom: 40px">
+        <div style="flex: 1; border: 1px solid #ddd; border-radius: 10px; padding: 20px;">
+          <h4 style="margin: 0; font-weight: normal">Forecast Accuracy (Last 7 Days)</h4>
+          <div style="font-size: 24px; font-weight: bold">{{ past["accuracy"] }}%</div>
+        </div>
+        <div style="flex: 1; border: 1px solid #ddd; border-radius: 10px; padding: 20px;">
+          <h4 style="margin: 0; font-weight: normal">Average Daily Sales</h4>
+          <div style="font-size: 24px; font-weight: bold">{{ past["average"] }} units</div>
+        </div>
+      </div>
+
+      <div style="margin-top: 20px; margin-bottom: 40px">
+        <canvas id="salesChart" height="50"></canvas>
+      </div>
+    </main>
+  </div>
+
+  <script>
+    const ctx = document.getElementById('salesChart').getContext('2d');
+    const salesChart = new Chart(ctx, {
+      type: 'line',
+      data: {
+        labels: {{ past['dates'] | tojson }},
+        datasets: [
+          {
+            label: 'Actual Sales',
+            data: {{ past['actual'] | tojson }},
+            borderColor: '#2196f3',
+            backgroundColor: 'rgba(33, 150, 243, 0.1)',
+            fill: true,
+            tension: 0.4
+          },
+          {
+            label: 'Predicted Sales',
+            data: {{ future['predicted'] | tojson }},
+            borderColor: '#4caf50',
+            backgroundColor: 'rgba(76, 175, 80, 0.1)',
+            fill: true,
+            tension: 0.4
+          }
+        ]
+      },
+      options: {
+        scales: {
+          y: {
+            beginAtZero: true
+          }
+        },
+        responsive: true,
+        plugins: {
+          legend: {
+            position: 'top'
+          }
+        }
+      }
+    });
+  </script>
+</body>
+</html>

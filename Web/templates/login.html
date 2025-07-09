@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Create Account - FreshCast</title>
+    <link rel="stylesheet" href="../static/css/register.css" />
+  </head>
+  <body>
+    <div class="overlay">
+      <div class="content">
+        <header>
+          <nav>
+            <div style="font-weight: bold; font-size: 18px">🔺 FreshCast</div>
+          </nav>
+        </header>
+        <div class="form-container">
+          <div class="form-box">
+            <h2>Login to FreshCast!</h2>
+            <form action="{{ url_for('login') }}" method='POST'>
+              <input type="email" placeholder="Email" name=email required />
+              <input type="password" placeholder="Password" name=password required />
+              <button type="submit">Login</button>
+            </form>
+            <div class="agreement">New User? <a href="{{ url_for('register') }}">Register Here</a></div>
+            <div class="agreement">
+              By signing up, you agree to our
+              <a href="#">Terms of Service</a> and
+              <a href="#">Privacy Policy</a>.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
