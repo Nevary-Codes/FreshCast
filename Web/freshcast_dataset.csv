@@ -1,0 +1,181 @@
+date,product,sales,temperature,rainfall_mm,is_holiday,event,quantity
+2025-06-01,Milk (1L),101,35.2,0,1,Local Festival,91
+2025-06-01,Bread Loaf,77,35.2,0,1,Local Festival,72
+2025-06-01,Bananas (1kg),108,35.2,0,1,Local Festival,114
+2025-06-02,Milk (1L),120,35.5,0,1,None,98
+2025-06-02,Bread Loaf,86,35.5,0,1,None,102
+2025-06-02,Bananas (1kg),89,35.5,0,1,None,127
+2025-06-03,Milk (1L),112,41.1,0,0,None,77
+2025-06-03,Bread Loaf,67,41.1,0,0,None,116
+2025-06-03,Bananas (1kg),82,41.1,0,0,None,72
+2025-06-04,Milk (1L),91,27.0,0,0,None,89
+2025-06-04,Bread Loaf,94,27.0,0,0,None,104
+2025-06-04,Bananas (1kg),101,27.0,0,0,None,64
+2025-06-05,Milk (1L),97,33.3,0,0,None,60
+2025-06-05,Bread Loaf,79,33.3,0,0,None,54
+2025-06-05,Bananas (1kg),97,33.3,0,0,None,103
+2025-06-06,Milk (1L),96,30.7,0,0,None,124
+2025-06-06,Bread Loaf,77,30.7,0,0,None,71
+2025-06-06,Bananas (1kg),85,30.7,0,0,None,104
+2025-06-07,Milk (1L),87,31.3,5,0,None,101
+2025-06-07,Bread Loaf,64,31.3,5,0,None,67
+2025-06-07,Bananas (1kg),95,31.3,5,0,None,126
+2025-06-08,Milk (1L),123,31.1,0,1,None,85
+2025-06-08,Bread Loaf,80,31.1,0,1,None,110
+2025-06-08,Bananas (1kg),101,31.1,0,1,None,52
+2025-06-09,Milk (1L),91,32.2,0,0,None,69
+2025-06-09,Bread Loaf,87,32.2,0,0,None,113
+2025-06-09,Bananas (1kg),86,32.2,0,0,None,56
+2025-06-10,Milk (1L),110,32.6,0,0,None,50
+2025-06-10,Bread Loaf,78,32.6,0,0,None,105
+2025-06-10,Bananas (1kg),83,32.6,0,0,None,94
+2025-06-11,Milk (1L),116,36.2,0,0,None,135
+2025-06-11,Bread Loaf,87,36.2,0,0,None,58
+2025-06-11,Bananas (1kg),77,36.2,0,0,None,86
+2025-06-12,Milk (1L),106,35.1,0,0,None,84
+2025-06-12,Bread Loaf,72,35.1,0,0,None,64
+2025-06-12,Bananas (1kg),101,35.1,0,0,None,61
+2025-06-13,Milk (1L),90,35.1,1,0,None,74
+2025-06-13,Bread Loaf,85,35.1,1,0,None,83
+2025-06-13,Bananas (1kg),92,35.1,1,0,None,72
+2025-06-14,Milk (1L),95,34.3,0,0,None,101
+2025-06-14,Bread Loaf,81,34.3,0,0,None,100
+2025-06-14,Bananas (1kg),97,34.3,0,0,None,110
+2025-06-15,Milk (1L),100,38.1,0,1,None,75
+2025-06-15,Bread Loaf,82,38.1,0,1,None,76
+2025-06-15,Bananas (1kg),107,38.1,0,1,None,83
+2025-06-16,Milk (1L),101,34.6,0,0,None,67
+2025-06-16,Bread Loaf,87,34.6,0,0,None,105
+2025-06-16,Bananas (1kg),86,34.6,0,0,None,67
+2025-06-17,Milk (1L),115,41.5,0,0,None,133
+2025-06-17,Bread Loaf,74,41.5,0,0,None,79
+2025-06-17,Bananas (1kg),80,41.5,0,0,None,130
+2025-06-18,Milk (1L),93,31.6,0,0,None,101
+2025-06-18,Bread Loaf,92,31.6,0,0,None,105
+2025-06-18,Bananas (1kg),94,31.6,0,0,None,125
+2025-06-19,Milk (1L),99,35.1,0,0,None,144
+2025-06-19,Bread Loaf,79,35.1,0,0,None,94
+2025-06-19,Bananas (1kg),88,35.1,0,0,None,72
+2025-06-20,Milk (1L),86,30.6,5,0,None,65
+2025-06-20,Bread Loaf,80,30.6,5,0,None,116
+2025-06-20,Bananas (1kg),95,30.6,5,0,None,127
+2025-06-21,Milk (1L),105,29.9,0,1,None,81
+2025-06-21,Bread Loaf,103,29.9,0,1,None,40
+2025-06-21,Bananas (1kg),92,29.9,0,1,None,98
+2025-06-22,Milk (1L),96,30.6,0,1,None,107
+2025-06-22,Bread Loaf,90,30.6,0,1,None,68
+2025-06-22,Bananas (1kg),110,30.6,0,1,None,83
+2025-06-23,Milk (1L),123,34.2,1,1,None,107
+2025-06-23,Bread Loaf,90,34.2,1,1,None,53
+2025-06-23,Bananas (1kg),93,34.2,1,1,None,101
+2025-06-24,Milk (1L),111,32.2,0,0,None,93
+2025-06-24,Bread Loaf,71,32.2,0,0,None,112
+2025-06-24,Bananas (1kg),87,32.2,0,0,None,97
+2025-06-25,Milk (1L),101,38.1,0,0,None,141
+2025-06-25,Bread Loaf,82,38.1,0,0,None,61
+2025-06-25,Bananas (1kg),104,38.1,0,0,None,79
+2025-06-26,Milk (1L),86,27.5,0,0,None,79
+2025-06-26,Bread Loaf,73,27.5,0,0,None,45
+2025-06-26,Bananas (1kg),75,27.5,0,0,None,122
+2025-06-27,Milk (1L),97,32.1,0,0,None,124
+2025-06-27,Bread Loaf,91,32.1,0,0,None,65
+2025-06-27,Bananas (1kg),96,32.1,0,0,None,109
+2025-06-28,Milk (1L),102,35.0,0,1,None,86
+2025-06-28,Bread Loaf,90,35.0,0,1,None,47
+2025-06-28,Bananas (1kg),113,35.0,0,1,None,86
+2025-06-29,Milk (1L),110,29.3,0,1,None,53
+2025-06-29,Bread Loaf,90,29.3,0,1,None,61
+2025-06-29,Bananas (1kg),104,29.3,0,1,None,53
+2025-06-30,Milk (1L),92,35.7,0,0,None,59
+2025-06-30,Bread Loaf,75,35.7,0,0,None,57
+2025-06-30,Bananas (1kg),82,35.7,0,0,None,129
+2025-06-01,Tomatoes (1kg),87,35.2,0,1,Local Festival,58
+2025-06-01,Lettuce (1 head),79,35.2,0,1,Local Festival,26
+2025-06-01,Chicken (1kg),87,35.2,0,1,Local Festival,75
+2025-06-02,Tomatoes (1kg),82,35.5,0,1,None,83
+2025-06-02,Lettuce (1 head),50,35.5,0,1,None,38
+2025-06-02,Chicken (1kg),90,35.5,0,1,None,50
+2025-06-03,Tomatoes (1kg),108,41.1,0,0,None,48
+2025-06-03,Lettuce (1 head),52,41.1,0,0,None,30
+2025-06-03,Chicken (1kg),85,41.1,0,0,None,71
+2025-06-04,Tomatoes (1kg),95,27.0,0,0,None,63
+2025-06-04,Lettuce (1 head),84,27.0,0,0,None,58
+2025-06-04,Chicken (1kg),76,27.0,0,0,None,38
+2025-06-05,Tomatoes (1kg),98,33.3,0,0,None,62
+2025-06-05,Lettuce (1 head),67,33.3,0,0,None,49
+2025-06-05,Chicken (1kg),79,33.3,0,0,None,66
+2025-06-06,Tomatoes (1kg),86,30.7,0,0,None,89
+2025-06-06,Lettuce (1 head),82,30.7,0,0,None,48
+2025-06-06,Chicken (1kg),82,30.7,0,0,None,67
+2025-06-07,Tomatoes (1kg),76,31.3,5,0,None,93
+2025-06-07,Lettuce (1 head),71,31.3,5,0,None,30
+2025-06-07,Chicken (1kg),88,31.3,5,0,None,33
+2025-06-08,Tomatoes (1kg),90,31.1,0,1,None,68
+2025-06-08,Lettuce (1 head),82,31.1,0,1,None,36
+2025-06-08,Chicken (1kg),65,31.1,0,1,None,36
+2025-06-09,Tomatoes (1kg),83,32.2,0,0,None,60
+2025-06-09,Lettuce (1 head),66,32.2,0,0,None,43
+2025-06-09,Chicken (1kg),86,32.2,0,0,None,56
+2025-06-10,Tomatoes (1kg),87,32.6,0,0,None,39
+2025-06-10,Lettuce (1 head),53,32.6,0,0,None,43
+2025-06-10,Chicken (1kg),68,32.6,0,0,None,62
+2025-06-11,Tomatoes (1kg),78,36.2,0,0,None,90
+2025-06-11,Lettuce (1 head),77,36.2,0,0,None,41
+2025-06-11,Chicken (1kg),66,36.2,0,0,None,74
+2025-06-12,Tomatoes (1kg),95,35.1,0,0,None,48
+2025-06-12,Lettuce (1 head),84,35.1,0,0,None,43
+2025-06-12,Chicken (1kg),76,35.1,0,0,None,75
+2025-06-13,Tomatoes (1kg),86,35.1,1,0,None,86
+2025-06-13,Lettuce (1 head),62,35.1,1,0,None,29
+2025-06-13,Chicken (1kg),90,35.1,1,0,None,61
+2025-06-14,Tomatoes (1kg),78,34.3,0,0,None,62
+2025-06-14,Lettuce (1 head),80,34.3,0,0,None,38
+2025-06-14,Chicken (1kg),81,34.3,0,0,None,52
+2025-06-15,Tomatoes (1kg),92,38.1,0,1,None,99
+2025-06-15,Lettuce (1 head),53,38.1,0,1,None,51
+2025-06-15,Chicken (1kg),85,38.1,0,1,None,32
+2025-06-16,Tomatoes (1kg),104,34.6,0,0,None,53
+2025-06-16,Lettuce (1 head),65,34.6,0,0,None,29
+2025-06-16,Chicken (1kg),79,34.6,0,0,None,39
+2025-06-17,Tomatoes (1kg),96,41.5,0,0,None,49
+2025-06-17,Lettuce (1 head),52,41.5,0,0,None,52
+2025-06-17,Chicken (1kg),81,41.5,0,0,None,63
+2025-06-18,Tomatoes (1kg),84,31.6,0,0,None,38
+2025-06-18,Lettuce (1 head),73,31.6,0,0,None,56
+2025-06-18,Chicken (1kg),71,31.6,0,0,None,33
+2025-06-19,Tomatoes (1kg),75,35.1,0,0,None,75
+2025-06-19,Lettuce (1 head),75,35.1,0,0,None,49
+2025-06-19,Chicken (1kg),90,35.1,0,0,None,44
+2025-06-20,Tomatoes (1kg),106,30.6,5,0,None,68
+2025-06-20,Lettuce (1 head),57,30.6,5,0,None,60
+2025-06-20,Chicken (1kg),60,30.6,5,0,None,39
+2025-06-21,Tomatoes (1kg),83,29.9,0,1,None,94
+2025-06-21,Lettuce (1 head),52,29.9,0,1,None,54
+2025-06-21,Chicken (1kg),88,29.9,0,1,None,75
+2025-06-22,Tomatoes (1kg),75,30.6,0,1,None,54
+2025-06-22,Lettuce (1 head),82,30.6,0,1,None,47
+2025-06-22,Chicken (1kg),90,30.6,0,1,None,25
+2025-06-23,Tomatoes (1kg),102,34.2,1,1,None,95
+2025-06-23,Lettuce (1 head),57,34.2,1,1,None,48
+2025-06-23,Chicken (1kg),72,34.2,1,1,None,36
+2025-06-24,Tomatoes (1kg),88,32.2,0,0,None,83
+2025-06-24,Lettuce (1 head),54,32.2,0,0,None,59
+2025-06-24,Chicken (1kg),84,32.2,0,0,None,28
+2025-06-25,Tomatoes (1kg),85,38.1,0,0,None,87
+2025-06-25,Lettuce (1 head),68,38.1,0,0,None,35
+2025-06-25,Chicken (1kg),88,38.1,0,0,None,41
+2025-06-26,Tomatoes (1kg),100,27.5,0,0,None,34
+2025-06-26,Lettuce (1 head),75,27.5,0,0,None,58
+2025-06-26,Chicken (1kg),77,27.5,0,0,None,26
+2025-06-27,Tomatoes (1kg),96,32.1,0,0,None,39
+2025-06-27,Lettuce (1 head),56,32.1,0,0,None,35
+2025-06-27,Chicken (1kg),77,32.1,0,0,None,59
+2025-06-28,Tomatoes (1kg),82,35.0,0,1,None,97
+2025-06-28,Lettuce (1 head),80,35.0,0,1,None,31
+2025-06-28,Chicken (1kg),62,35.0,0,1,None,47
+2025-06-29,Tomatoes (1kg),82,29.3,0,1,None,89
+2025-06-29,Lettuce (1 head),60,29.3,0,1,None,31
+2025-06-29,Chicken (1kg),74,29.3,0,1,None,66
+2025-06-30,Tomatoes (1kg),90,35.7,0,0,None,58
+2025-06-30,Lettuce (1 head),54,35.7,0,0,None,49
+2025-06-30,Chicken (1kg),70,35.7,0,0,None,64
