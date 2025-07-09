@@ -50,7 +50,8 @@ def register():
         
         if "error" in user_data:
             return redirect(url_for("register"))
-        login_user(user_data)
+        user = User(user_data)
+        login_user(user)
         return redirect(url_for("dashboard"))
 
     # GET request: render the register page
