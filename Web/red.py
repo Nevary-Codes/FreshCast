@@ -132,12 +132,13 @@ def forecast_past(product):
     
     
 def addUser(name, email, password, users):
-    user = {
-        "name": name,
-        "email": email,
-        "password": bcrypt.hashpw(password.encode('utf-8'), bcrypt.gensalt())
-    }
+    if not users.find_one({"email": email}):
+        user = {
+            "name": name,
+            "email": email,
+            "password": bcrypt.hashpw(password.encode('utf-8'), bcrypt.gensalt())
+        }
 
-    result = users.insert_one(user)
-    user["_id"] = result.inserted_id
-    return user
+        result = users.insert_one(user)
+        user["_id"] = result.inserted_id
+        return user

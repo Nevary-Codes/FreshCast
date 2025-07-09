@@ -16,6 +16,7 @@ app.secret_key = os.getenv("SECRET_KEY", "super-secret-key")
 
 login_manager = LoginManager()
 login_manager.init_app(app)
+login_manager.login_view = "login"
 
 load_dotenv()
 uri = os.getenv("MONGO_URI")
@@ -49,7 +50,7 @@ def register():
         
         if "error" in user_data:
             return redirect(url_for("register"))
-        
+        login_user(user_data)
         return redirect(url_for("dashboard"))
 
     # GET request: render the register page
